@@ -1,5 +1,30 @@
 <template>
-    Register
+    <section class="form-wrapper">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                        <div class="form-div text-center">
+                            <h2>Register</h2>
+                            <p>Enter your account details below</p>
+                            <div class="form-group mt-5">
+                                <input class="form-control" type="email" v-model="Email"  placeholder="Email address">
+                                <input class="form-control" type="password" v-model="Password" placeholder="Password">
+                            </div>
+                            <div class="form-group form-check-label">
+                                <label for="tarms-check">
+                                <input class="d-none" type="checkbox" id="tarms-check" checked=""><span class="checkbox"></span>
+                                <p>I agree to the <a href="term.html"> Terms &amp; Condition </a></p>
+                                </label>
+                            </div>
+                            <div class="form-group button-block text-center">
+                                <button class="form-btn"  @click="register">register</button>
+                                <p class="sign-up-text">Already have an account?<a href="/login">Log in</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>

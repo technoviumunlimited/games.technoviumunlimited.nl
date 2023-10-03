@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../technoviumunlimited_api_functions"
+		},
+		{
+			"path": "../test.technoviumunlimited.nl"
+		}
+	],
+	"settings": {}
+}
