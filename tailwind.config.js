@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     container: {
-      padding: '5rem',
+      padding: '2rem',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
@@ -32,4 +32,3 @@ module.exports = {
   },
   plugins: [],
 }
-

@@ -1,5 +1,5 @@
 <template>
-  <a :href="card.link" class="flex flex-col bg-bgsecondary rounded-xl overflow-hidden">
+  <a :href="card.link" class="flex flex-col bg-bgsecondary rounded-xl overflow-hidden hover:-translate-y-3 transition duration-300 ease-in-out">
     <div class="gradient-top relative h-44 flex-none">
         <img :src="card.src" alt="Card Image" class="max-h-full min-w-full object-cover h-44 object-center">
     </div>
