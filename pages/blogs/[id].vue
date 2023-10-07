@@ -12,7 +12,7 @@ const img = useImage()
                     <div class="text-xl md:text-3xl font-bold">{{ blogData.name }}</div>
                     <div class="text-light">Geplaatst op {{ blogData.date }}</div>
                 </div>
-                <div class="text-light">{{ blogData.content }}</div>
+                <div class="text-light whitespace-break-spaces">{{ blogData.content }}</div>
             </div>
         </div>
     </div>

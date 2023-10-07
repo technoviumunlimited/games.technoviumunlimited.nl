@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row gap-5 [&>*:nth-child(n)]:md:basis-96 flex-wrap group">
+    <div class="flex flex-row gap-5 [&>*:nth-child(n+2)]:md:basis-96 container flex-wrap mx-auto mt-12 md:mt-24 group/top top">
       <BlogCard v-for="card in blogcards" :key="card.name" :card="card" />
     </div>
   </template>
