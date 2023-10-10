@@ -3,45 +3,43 @@
       <Category
         :key="defaultCategory.id"
         :category="defaultCategory"
-        :active="isActiveCategory(defaultCategory.id)"
-        @categoryClicked="setActiveCategory(defaultCategory.id)"
+        :active="isActiveCategory('')"
+        @categoryClicked="setCategory('')"
       />
       <Category
         v-for="category in categories"
         :key="category.id"
         :category="category"
         :active="isActiveCategory(category.id)"
-        @categoryClicked="setActiveCategory(category.id)"
+        @categoryClicked="setCategory(category.id)"
       />
     </div>
   </template>
   
   <script>
-  export default {
-    data() {
-      return {
-        activeCategory: 1, // Initially, set the first category as active
-        defaultCategory: {
-          id: 1,
-          name: 'Latest and Greatest',
-        },
-        // ...
-      };
-    },
-    props: {
-      categories: {
-        type: Array,
-        required: true,
+export default {
+  data() {
+    return {
+      defaultCategory: {
+        id: 'default',
+        name: 'Latest and Greatest',
       },
+      // ...
+    };
+  },
+  
+  props: {
+    activeCategory: {
+      type: String,
+      required: true,
     },
-    methods: {
-      isActiveCategory(categoryId) {
-        return this.activeCategory === categoryId;
-      },
-      setActiveCategory(categoryId) {
-        this.activeCategory = categoryId;
-      },
+  },
+  
+  methods: {
+    isActiveCategory(categoryId) {
+      return categoryId === this.activeCategory;
     },
-  };
-  </script>
+  },
+};
+</script>
   
