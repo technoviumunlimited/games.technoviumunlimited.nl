@@ -14,19 +14,20 @@ export const createUser = async (email, password) => {
     const errorMessage = error.message;
     console.log(errorMessage);
   });
-  return credentials;
+  return {credentials, error};
 }
 
 export const signInUser = async (email, password) => {
     const auth = getAuth();
     const credentials = await signInWithEmailAndPassword(auth, email, password)
+    const err = ''
   .catch((error) => {
     const errorCode = error.code;
     console.log(errorCode);
     const errorMessage = error.message;
     console.log(errorMessage);
   });
-  return credentials;
+  return {credentials, errorCode, errorMessage};
 }
 
 export const initUser = async () => {

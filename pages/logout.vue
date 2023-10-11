@@ -1,6 +1,6 @@
 <template>
     <div>
-    Logging out
+    Logging out...
     </div>
 </template>
 
@@ -9,7 +9,7 @@
         try {
             const resultLogout = await signOutUser();
             console.log("Logout user:", resultLogout)
-            //navigateTo("/login");
+            navigateTo("/login");
         } catch (error) {
             console.error(error);
             state.errors.push(error);

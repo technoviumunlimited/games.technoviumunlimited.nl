@@ -20,4 +20,20 @@
 </template>
 
 <script setup>
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const Email = ref("");
+const Password = ref("");
+const register = () => {
+    createUserWithEmailAndPassword(getAuth(), Email.value, Password.value)
+    .then((data) => {
+        console.log(data)
+        console.log("Successfully registered");
+        navigateTo("/");
+    })
+    .catch((error) => {
+        console.log(error.code);
+        alert(error.message);
+    })
+}
 </script>
