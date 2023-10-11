@@ -1,45 +1,42 @@
 <template>
     <div class="flex-1 basis-72 flex flex-col gap-5">
       <Category
-        :key="defaultCategory.id"
+        :key="defaultCategory._id"
         :category="defaultCategory"
-        :active="isActiveCategory('')"
-        @categoryClicked="setCategory('')"
+        :active="activeCategory === defaultCategory._id"
+      @click="setActiveCategory(defaultCategory._id)"
       />
       <Category
-        v-for="category in categories"
-        :key="category.id"
+        v-for="category in data.BlogsCategories"
+        :key="category._id"
         :category="category"
-        :active="isActiveCategory(category.id)"
-        @categoryClicked="setCategory(category.id)"
+        :active="activeCategory === category._id"
+        @click="setActiveCategory(category._id)"
       />
     </div>
   </template>
-  
-  <script>
-export default {
-  data() {
-    return {
-      defaultCategory: {
-        id: 'default',
-        name: 'Latest and Greatest',
-      },
-      // ...
-    };
+
+<script setup>
+const defaultCategory = {
+  _id: 'default',
+  name: 'Latest and Greatest'
+};
+
+const props = defineProps({
+  data: {
+    type: Object,
+    required: true,
   },
-  
-  props: {
-    activeCategory: {
-      type: String,
-      required: true,
-    },
+  activeCategory: {
+    type: String,
+    required: true,
   },
-  
-  methods: {
-    isActiveCategory(categoryId) {
-      return categoryId === this.activeCategory;
-    },
-  },
+});
+
+const emit = defineEmits();
+
+const setActiveCategory = (categoryId) => {
+  console.log('setActiveCategory called with category ID:', categoryId);
+  emit('update:activeCategory', categoryId);
 };
 </script>
-  

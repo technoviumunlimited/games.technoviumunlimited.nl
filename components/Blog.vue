@@ -7,12 +7,12 @@
             <div class="flex flex-col gap-1">
                 <div class="flex flex-row gap-3 items-center font-semibold text-sm group-first:text-base" style="color:red">
                     <div class="h-2 w-2" style="background-color: red;"></div>
-                    <div>{{ data.blog[0].categorie }}</div>
+                    <div>{{ data.blog[0].category }}</div>
                 </div>
-                <div class="text-xl md:text-3xl font-bold">{{ data.blog[0].title }}</div>
+                <h1 class="text-xl md:text-3xl font-bold">{{ data.blog[0].title }}</h1>
                 <div class="text-light">Geplaatst op {{ formatDate(data.blog[0].date._seconds) }}</div>
             </div>
-            <div class="text-sm lg:text-base text-light whitespace-break-spaces">{{ data.blog[0].discription }}</div>
+            <p class="text-sm lg:text-base text-light whitespace-break-spaces">{{ data.blog[0].description }}</p>
         </div>
     </div>
 </template>
