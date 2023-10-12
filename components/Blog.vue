@@ -12,7 +12,7 @@
                 <h1 class="text-xl md:text-3xl font-bold">{{ data.blog[0].title }}</h1>
                 <div class="text-light">Geplaatst op {{ formatDate(data.blog[0].date._seconds) }}</div>
             </div>
-            <p class="text-sm lg:text-base text-light whitespace-break-spaces">{{ data.blog[0].description }}</p>
+            <p class="text-sm lg:text-base text-light whitespace-break-spaces" v-html="data.blog[0].description"></p>
         </div>
     </div>
 </template>

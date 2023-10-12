@@ -1,7 +1,6 @@
 <script setup>
 const route = useRoute();
 const { data, error, pending, refresh } = await useFetch(`https://api.technoviumunlimited.nl/v1/blogs/` + route.params.id)
-console.log(data)
 </script>
 
 

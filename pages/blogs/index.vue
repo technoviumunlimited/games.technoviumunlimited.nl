@@ -1,31 +1,40 @@
-<script setup lang="ts">
-let blogsPerPage = 10;
+<script setup>
+let blogsPerPage = 4;
 
-const page = ref<number>(1)
+let page = 1;
+
+let take = ref(blogsPerPage);
 
 // Set active category
-const activeCategory = ref<string>('default');
+let activeCategory = ref('default');
 
-let queryString = computed(() => {
-  let values = '?take=' + (page.value * blogsPerPage);;
-
-  if (activeCategory.value !== 'default') {
-    values += '&category=' + activeCategory.value;
-  }
-
-  return values;
+watch(take, () => {
+  console.log("take changed")
 });
 
-const { data: blogData, error: blogError, pending: blogPending, refresh: blogRefresh } = await useFetch('https://api.technoviumunlimited.nl/v1/blogs' + queryString.value, {
-  watch:[activeCategory, ]
+
+const { data: blogData, error: blogError, pending: blogPending, refresh: blogRefresh } = await useFetch('https://api.technoviumunlimited.nl/v1/blogs', {
+  query: {
+    take: take.value
+  },
+  watch: [take],
 });
+
+// Watch for changes in blogData and log it
+watch(blogData, () => {
+  console.log('blogData changed:', blogData);
+});
+
 const { data: blogDataTop, error: blogErrorTop, pending: blogPendingTop, refresh: blogRefreshTop } = await useFetch('https://api.technoviumunlimited.nl/v1/blogs', {
-  query: {take:3}
+  query: { take: 3 }
 });
 const { data: categories, error: categoriesError, pending: categoriesPending, refresh: categoriesRefresh } = await useFetch('https://api.technoviumunlimited.nl/v1/blogscategories');
 
 function loadMore() {
-  page.value++;
+  page++;
+  console.log(page)
+  take.value = page * blogsPerPage;
+  console.log(take.value);
 }
 
 </script>
@@ -44,7 +53,7 @@ function loadMore() {
         />
         <div class="flex-1 basis-full flex flex-col items-center gap-8">
           <BlogCardList :data="blogData" :loading="blogPending" />
-          <button @onclick="loadMore()"
+          <button @click="loadMore"
             class="flex flex-row items-center justify-center gap-3 h-8 w-28 lg:h-12 lg:w-36 border-2 border-bgbuttonprimary text-bgbuttonprimary hover:border-primary hover-text-primary rounded-lg uppercase"
           >
             Load more

@@ -10,10 +10,9 @@
         </div>
       </div>
       <div class="flex-1 basis-96 bg-bgsecondary rounded-lg shadow-md flex flex-col gap-3 p-8">
-        <h1 class="font-black text-3xl">ROC NIJMEGEN MAZE</h1>
+        <h1 class="font-black text-3xl">{{ data.game[0].name }}</h1>
         <div class="flex flex-row items-center gap-5 font-black text-light text-lg">
-          <span class="">Version 1.7.9</span>
-          <span class="">2023</span>
+          <!-- <span class="">{{format(data.game[0].date._seconds)}}</span> -->
         </div>
         <div class="flex flex-row gap-3 items-center font-semibold text-sm group-first:text-base" style="color:crimson"><div class="h-2 w-2" style="background-color: crimson;"></div><div>3D omgeving</div></div>
         <p class="text-light whitespace-break-spaces">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
@@ -24,13 +23,10 @@ dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo d
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
-import { onMounted, ref, reactive, watchEffect } from 'vue';
-
 const route = useRoute();
-const nuxtApp = useNuxtApp();
 
-
+const { data, error, pending, refresh } = await useFetch(`https://api.technoviumunlimited.nl/v1/games/` + route.params.id);
+console.log(data);
 
 const state = reactive({
   results: {},
@@ -48,6 +44,19 @@ onMounted(async () => {
     state.errors.push(error);
   }
 });
+
+
+function formatDate(timestamp) {
+  const date = new Date(timestamp * 1000); // Convert to milliseconds
+  const month = date.getMonth() + 1; // Months are zero-based
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  // Use padStart to ensure two-digit format for month and day
+  const formattedDate = `${year}`;
+
+  return formattedDate;
+};
 
 
 </script>
