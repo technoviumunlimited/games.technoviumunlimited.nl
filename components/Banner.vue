@@ -1,11 +1,11 @@
 <template>
-        <div class="flex flex-row items-center justify-between items-center lg:bg-primary relative">
+        <div class="flex flex-row items-center justify-between items-center lg:bg-primary relative h-72 md:h-96 lg:h-auto">
             <div class="absolute lg:static flex-1 z-10 basis-[45%] h-full container mx-auto flex flex-col justify-end py-8 lg:py-0 lg:justify-center gap-5">
                 
             </div>
-            <div class="absolute w-full h-full">
+            <div class="absolute w-full h-full z-20">
                 <div class="container mx-auto h-full">
-                    <div class="flex flex-col justify-end py-8 lg:py-0 lg:justify-center gap-5 h-full w-[45%] pr-16">
+                    <div class="flex flex-col justify-end py-8 lg:py-0 lg:justify-center gap-5 h-full lg:w-[45%] pr-16">
                         <h2 class="text-3xl lg:text-6xl font-black uppercase">Technovium Unlimited</h2>
                         <div class="flex flex-row gap-5 items-center text-sm lg:text-base">
                             <span class="font-black">VERSION 1.7.9</span>
@@ -14,10 +14,10 @@
                         </div>
                         <p class="hidden lg:block text-light text-sm lg:text-base">Educatieve projecten, 3D omgevingen en spellen, gemaakt door ROC studenten en docenten.</p>
                         <div class="flex flex-row items-center flex-wrap gap-3 lg:gap-8 text-sm lg:text-lg">
-                            <a href="#/game/bf2q1Mv7iN1Reln17pf9" class="flex flex-row items-center justify-center gap-3 h-8 w-28 lg:h-12 lg:w-36 bg-bgbuttonprimary text-buttonprimary hover:text-slate-300 rounded-xl uppercase">
+                            <a href="/games/bf2q1Mv7iN1Reln17pf9" class="flex flex-row items-center justify-center gap-3 h-8 w-28 lg:h-12 lg:w-36 bg-bgbuttonprimary text-buttonprimary hover:text-slate-300 rounded-xl uppercase">
                                 <i class="fa-solid fa-play"></i>Play
                             </a>
-                            <div class="group relative">
+                            <div class="group relative hidden">
                                 <div class="flex flex-row items-center justify-center gap-3 h-8 w-28 lg:h-12 lg:w-36 bg-bgbuttonsecondary text-buttonsecondary rounded-xl group-hover:rounded-b-none group-hover:text-primary">
                                     <i class="fa-solid fa-share-nodes"></i><span>SHARE</span>
                                 </div>
@@ -35,9 +35,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-1 basis-full flex items-center justify-center lg:basis-[55%] min-h-full overflow-hidden relative right-wrap object-cover aspect-video">
-                <video autoplay="" loop="" id="myVideo" class="xl:w-full max-w-none object-center">
-                <source src="https://technoviumunlimited.nl/media/play.3dc6e4a3.mp4" type="video/mp4">
+            <div class="flex-1 basis-full flex items-center justify-center lg:basis-[55%] min-h-full overflow-hidden relative right-wrap object-cover aspect-video h-full">
+                <video autoplay loop id="myVideo" class="xl:w-full max-w-none object-center">
+                    <source src="https://technoviumunlimited.nl/media/play.3dc6e4a3.mp4" type="video/mp4">
                 </video>
             </div>
         </div>

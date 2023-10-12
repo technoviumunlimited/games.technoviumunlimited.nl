@@ -1,5 +1,5 @@
 <template>
-        <div class="container mx-auto mt-12 md:mt-24">
+        <div class="container mx-auto mt-24">
             <div class="flex flex-col gap-8 bg-primary relative p-8 rounded-xl">
                 <div class="flex flex-row items-center flex-wrap justify-between gap-8">
                     <div class="flex flex-row gap-3">

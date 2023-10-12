@@ -12,11 +12,12 @@
       <div class="flex-1 basis-96 bg-bgsecondary rounded-lg shadow-md flex flex-col gap-3 p-8">
         <h1 class="font-black text-3xl">{{ data.game[0].name }}</h1>
         <div class="flex flex-row items-center gap-5 font-black text-light text-lg">
-          <!-- <span class="">{{format(data.game[0].date._seconds)}}</span> -->
         </div>
-        <div class="flex flex-row gap-3 items-center font-semibold text-sm group-first:text-base" style="color:crimson"><div class="h-2 w-2" style="background-color: crimson;"></div><div>3D omgeving</div></div>
-        <p class="text-light whitespace-break-spaces">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        <div v-for="category in data.game[0].category" class="flex flex-row gap-3 items-center font-semibold text-sm group-first:text-base" v-bind:style="{color: category.color}">
+                    <div class="h-2 w-2" v-bind:style="{backgroundColor: category.color}"></div>
+                    <div>{{ category.name }}</div>
+                </div>
+        <p class="text-light whitespace-break-spaces">{{ data.game[0].description }}</p>
       </div>
     </div>
   </div>

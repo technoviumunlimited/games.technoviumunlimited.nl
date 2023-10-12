@@ -9,7 +9,7 @@ const { data, error, pending, refresh } = await useFetch(`https://api.technovium
     <span v-if="pending">Loading...</span>
 
     <div v-else-if="data">
-        <Blog :data="data" />
+        <Blog :data="data.blog[0]" />
     </div>
 
     <span v-else-if="error">Error: {{ error }}</span>

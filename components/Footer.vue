@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-footer text-light text-lg font-bold mt-12 lg:mt-24">
+    <div class="bg-footer text-light text-lg font-bold mt-24">
         <div class="container mx-auto flex flex-col">
             <div class="py-16 space-y-4 flex flex-col md:flex-row gap-24 md:items-center flex-wrap gap-y-5">
                 <div class="flex-1">
@@ -10,9 +10,9 @@
                         ontwikkeld door studenten en docenten.
                     </p>
                 </div>
-                <div class="flex-1 flex justify-end w-fit">
+                <a href="/" class="flex-1 flex justify-end w-fit">
                     <img src="/img/fulllogo.png" alt="logo" class="h-32 aspect-auto"/>
-                </div>
+                </a>
             </div>
             <div class="py-4 flex flex-row flex-wrap gap-y-5 justify-between items-center text-sm text-light font-bold">
                 <span>© 2023 copyright. All rights reserved.</span>
