@@ -28,12 +28,21 @@
                 <div class="group relative hidden md:block">
                     <div class="flex flex-row items-center gap-3 justify-end hover:text-primary"><i class="fa-solid fa-user"></i><span>My Account</span></div>
                     <div class="group-hover:block hidden absolute pt-5 right-0 top-full min-width-[160px] z-20">
-                        <ul class="bg-bgdefault shadow-lg rounded divide-y divide-slate-300">
+                        <ul v-if="firebaseUser" class="bg-bgdefault shadow-lg rounded divide-y divide-slate-300">
                             <li class="px-12 py-4">
-                                <a href="#/register" class="hover:text-primary">Register </a>
+                                <a href="/account" class="hover:text-primary">Account </a>
                             </li>
                             <li class="px-12 py-4">
-                                <a href="#/login" class="hover:text-primary">Login </a>
+                                <a href="/logout" class="hover:text-primary">Logout </a>
+                            </li>
+                        </ul>
+
+                        <ul v-else class="bg-bgdefault shadow-lg rounded divide-y divide-slate-300">
+                            <li class="px-12 py-4">
+                                <a href="/register" class="hover:text-primary">Register </a>
+                            </li>
+                            <li class="px-12 py-4">
+                                <a href="/login" class="hover:text-primary">Login </a>
                             </li>
                         </ul>
                     </div>
@@ -41,3 +50,6 @@
             </div>
         </div>
 </template>
+<script setup>
+const firebaseUser = useFirebaseUser();
+</script>

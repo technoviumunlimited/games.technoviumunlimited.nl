@@ -11,7 +11,7 @@
                                 <span class="tag">2023</span>
                                 <span class="tag"><b>Top Opleidingen</b></span>
                                 <p>Bas verzient hier wat tekst!!!!!!</p>
-                                <a href="" class="btn btn-lg"><img src="~/assets/images/play.png" alt="icn">Play</a>
+                                <a href="" class="btn btn-lg"><img src="../assets/images/play.png" alt="icn">Play</a>
                                 <a href="#" class="icon-bttn"><i class="ti-plus text-white"></i></a>
                                 <div class="icon-bttn">
                                     <i class="ti-sharethis text-white mr-4"></i>
