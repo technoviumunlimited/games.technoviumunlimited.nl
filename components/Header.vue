@@ -26,25 +26,25 @@
                     </div>
                 </div>
                 <div class="group relative hidden md:block">
-                    <div class="flex flex-row items-center gap-3 justify-end hover:text-primary"><i class="fa-solid fa-user"></i><span>My Account</span></div>
-                    <div class="group-hover:block hidden absolute pt-5 right-0 top-full min-width-[160px] z-20">
-                        <ul v-if="firebaseUser" class="bg-bgdefault shadow-lg rounded divide-y divide-slate-300">
-                            <li class="px-12 py-4">
-                                <a href="/account" class="hover:text-primary">Account </a>
-                            </li>
-                            <li class="px-12 py-4">
-                                <a href="/logout" class="hover:text-primary">Logout </a>
-                            </li>
-                        </ul>
+                    <div class="flex flex-row items-center gap-3 justify-end group-hover:text-primary"><i class="fa-solid fa-user"></i><span>My Account</span></div>
+                    <div class="block absolute pt-5 right-0 top-full min-width-[160px] z-20 transition-[opacity,margin] duration group-hover:opacity-100 opacity-0 min-w-[15rem]">
+                        <div v-if="firebaseUser" class="bg-bgdefault shadow-lg rounded-lg py-4 px-2 flex flex-col gap-2">
+                            <a href="/account" class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-gray-800 hover:bg-bgsecondary focus:ring-2 focus:ring-primary">
+                                Account 
+                            </a>
+                            <a href="/logout" class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-gray-800 hover:bg-bgsecondary focus:ring-2 focus:ring-primary">
+                                Logout 
+                            </a>
+                        </div>
 
-                        <ul v-else class="bg-bgdefault shadow-lg rounded divide-y divide-slate-300">
-                            <li class="px-12 py-4">
-                                <a href="/register" class="hover:text-primary">Register </a>
-                            </li>
-                            <li class="px-12 py-4">
-                                <a href="/login" class="hover:text-primary">Login </a>
-                            </li>
-                        </ul>
+                        <div v-else class="bg-bgdefault shadow-lg rounded-lg py-4 px-2 flex flex-col gap-2">
+                            <a href="/register" class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-gray-800 hover:bg-bgsecondary focus:ring-2 focus:ring-primary">
+                                Register 
+                            </a>
+                            <a href="/login" class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-gray-800 hover:bg-bgsecondary focus:ring-2 focus:ring-primary">
+                                Login 
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
