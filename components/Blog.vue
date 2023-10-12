@@ -5,9 +5,9 @@
         </div>
         <div class="flex flex-col gap-5 p-8 md:p-12">
             <div class="flex flex-col gap-1">
-                <div class="flex flex-row gap-3 items-center font-semibold text-sm group-first:text-base" style="color:red">
-                    <div class="h-2 w-2" style="background-color: red;"></div>
-                    <div>{{ data.blog[0].category }}</div>
+                <div v-for="category in data.blog[0].caregory" class="flex flex-row gap-3 items-center font-semibold text-sm group-first:text-base" v-bind:style="{color: category.color}">
+                    <div class="h-2 w-2" v-bind:style="{backgroundColor: category.color}"></div>
+                    <div>{{ category.name }}</div>
                 </div>
                 <h1 class="text-xl md:text-3xl font-bold">{{ data.blog[0].title }}</h1>
                 <div class="text-light">Geplaatst op {{ formatDate(data.blog[0].date._seconds) }}</div>
