@@ -20,7 +20,7 @@
                                 <a class="nav-link" href="/about">Wat is Technovium Unlimited</a>
                             </li>
                             <li class="nav-item hover:text-primary">
-                                <a class="nav-link" href="/blogs">blogs</a>
+                                <a class="nav-link" href="/blogs">Blogs</a>
                             </li>
                         </ul>
                     </div>
