@@ -19,7 +19,9 @@ let queryString = computed(() => {
 const { data: blogData, error: blogError, pending: blogPending, refresh: blogRefresh } = await useFetch('https://api.technoviumunlimited.nl/v1/blogs' + queryString.value, {
   watch:[activeCategory, ]
 });
-const { data: blogDataTop, error: blogErrorTop, pending: blogPendingTop, refresh: blogRefreshTop } = await useFetch('https://api.technoviumunlimited.nl/v1/blogs');
+const { data: blogDataTop, error: blogErrorTop, pending: blogPendingTop, refresh: blogRefreshTop } = await useFetch('https://api.technoviumunlimited.nl/v1/blogs', {
+  query: {take:3}
+});
 const { data: categories, error: categoriesError, pending: categoriesPending, refresh: categoriesRefresh } = await useFetch('https://api.technoviumunlimited.nl/v1/blogscategories');
 
 function loadMore() {
