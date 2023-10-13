@@ -7,7 +7,7 @@ export default defineNuxtPlugin(() => {
         const { $auth } = useNuxtApp();
         console.log('auth middleware extended from plugins/firebaseAuth.client.js', $auth?.currentUser);
         if(!$auth?.currentUser?.uid){
-            return abortNavigation();
+            return navigateTo("/");
         }
     });
 });
