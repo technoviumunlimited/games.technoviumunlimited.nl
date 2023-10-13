@@ -1,12 +1,19 @@
 <template>
   <div class="container mx-auto mt-12 md:mt-24">
     <div class="flex flex-row gap-8 flex-wrap">
-      <div class="flex-1 w-fit basis-2/3 bg-bgsecondary px-4 py-6 rounded-lg shadow-md">
-        <div class="w-full aspect-w-16 aspect-h-9 h-[642px]" id="game" >
+      <div class="flex-1 w-fit basis-2/3 bg-bgsecondary rounded-lg shadow-md flex flex-col overflow-hidden">
+        <div class="w-full aspect-w-16 aspect-h-9" id="game" >
           <iframe class="w-full h-full" v-if="embeddedGameUrl"
             :src="embeddedGameUrl"
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           ></iframe>
+        </div>
+        <div class="w-full flex justify-between items-center text-3xl">
+          <div class="h-full flex flex-row">
+            <div class="w-24 bg-primary"></div>
+            <div class="w-24 bg-primary" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);"></div>
+          </div>
+          <i class="fa-solid fa-expand p-6"></i>
         </div>
       </div>
       <div class="flex-1 basis-96 bg-bgsecondary rounded-lg shadow-md flex flex-col gap-3 p-8">
