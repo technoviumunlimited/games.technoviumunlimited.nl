@@ -2,8 +2,8 @@
   <div class="container mx-auto mt-12 md:mt-24">
     <div class="flex flex-row gap-8 flex-wrap">
       <div class="flex-1 w-fit basis-2/3 bg-bgsecondary rounded-lg shadow-md flex flex-col overflow-hidden">
-        <div class="w-full aspect-w-16 aspect-h-9" id="game" >
-          <iframe class="w-full h-full" v-if="embeddedGameUrl"
+        <div class="w-full aspect-w-16 aspect-h-9"  >
+          <iframe class="w-full h-full" id="game" v-if="embeddedGameUrl"
             :src="embeddedGameUrl"
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           ></iframe>
@@ -13,7 +13,7 @@
             <div class="w-24 bg-primary"></div>
             <div class="w-24 bg-primary" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);"></div>
           </div>
-          <button @onclick="sendMessageToIframe"><i class="fa-solid fa-expand p-6"></i></button>
+          <button @click="sendMessageToIframe"><i class="fa-solid fa-expand p-6"></i></button>
         </div>
       </div>
       <div class="flex-1 basis-96 bg-bgsecondary rounded-lg shadow-md flex flex-col gap-3 p-8">
@@ -56,7 +56,7 @@ onMounted(async () => {
 const sendMessageToIframe = () => {
   // Get a reference to the iframe element
   const iframe = document.getElementById('game');
-
+  console.log(iframe);
  
 
   if (iframe) {
