@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
     }
   },
-  //ssr:false, //for now we need later to fix this for SEO
+  ssr:false, //for now we need later to fix this for SEO
   //modules: ['nuxt-unity-webgl'],
   modules: [
     // Load image optimization

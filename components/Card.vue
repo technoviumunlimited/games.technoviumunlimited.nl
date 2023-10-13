@@ -10,7 +10,7 @@
           <div>{{ category.name }}</div>
         </div>
         <div class="text-xs text-light">
-          <span>Auteurs: </span><span>{{ card.created_by }}</span>
+          <!--<span>Auteurs: </span><span>{{ card.created_by }}</span>-->
         </div>
     </div>
   </a>
