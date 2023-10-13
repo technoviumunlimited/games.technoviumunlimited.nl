@@ -1,5 +1,5 @@
 <template>
-    <a :href="'blogs/' + card._id" class="flex-1 flex basis-full flex-col group-[.top]/top:first:lg:flex-row group-[.top]/top:first:lg:items-stretch group-[.top]/top:first:lg:justify-stretch bg-bgsecondary group/card rounded-lg overflow-hidden p-4 shadow-md hover:-translate-y-1 transition duration-300 ease-in-out">
+    <a :href="'/blogs/' + card._id" class="flex-1 flex basis-full flex-col group-[.top]/top:first:lg:flex-row group-[.top]/top:first:lg:items-stretch group-[.top]/top:first:lg:justify-stretch bg-bgsecondary group/card rounded-lg overflow-hidden p-4 shadow-md hover:-translate-y-1 transition duration-300 ease-in-out">
         <div class="flex-1 basis-1/2 xl:basis-1/3 bg-slate-200 overflow-hidden relative min-h-[15rem] group-[.top]/top:group-first/card:lg:min-h-[20rem] rounded-lg"><img class="object-cover absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 min-w-full min-h-full rounded-lg" v-bind:src="card._thumb" loading="lazy"></div>
         <div class="flex-1 basis-1/2 group-[.top]/top:group-first/card:pl-8 px-4 pt-8 flex flex-col gap-3">
           <div class="flex flex-row flex-wrap gap-5 items-center">
