@@ -13,7 +13,7 @@
             <div class="w-24 bg-primary"></div>
             <div class="w-24 bg-primary" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);"></div>
           </div>
-          <i class="fa-solid fa-expand p-6"></i>
+          <button @onclick="sendMessageToIframe"><i class="fa-solid fa-expand p-6"></i></button>
         </div>
       </div>
       <div class="flex-1 basis-96 bg-bgsecondary rounded-lg shadow-md flex flex-col gap-3 p-8">
@@ -53,18 +53,15 @@ onMounted(async () => {
   }
 });
 
+const sendMessageToIframe = () => {
+  // Get a reference to the iframe element
+  const iframe = document.getElementById('game');
 
-function formatDate(timestamp) {
-  const date = new Date(timestamp * 1000); // Convert to milliseconds
-  const month = date.getMonth() + 1; // Months are zero-based
-  const day = date.getDate();
-  const year = date.getFullYear();
+ 
 
-  // Use padStart to ensure two-digit format for month and day
-  const formattedDate = `${year}`;
-
-  return formattedDate;
-};
-
-
+  if (iframe) {
+    // Send a message to the iframe
+    iframe.contentWindow.postMessage('SetFullscreen', 'https://api.technoviumunlimited.nl/embeddedgames/' + route.params.id);
+  }
+}
 </script>
