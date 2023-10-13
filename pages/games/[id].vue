@@ -24,7 +24,7 @@
                     <div class="h-2 w-2" v-bind:style="{backgroundColor: category.color}"></div>
                     <div>{{ category.name }}</div>
                 </div>
-        <p class="text-light whitespace-break-spaces">{{ data.game[0].description }}</p>
+        <p class="text-light whitespace-break-spaces" v-html=data.game[0].description></p>
       </div>
     </div>
   </div>
