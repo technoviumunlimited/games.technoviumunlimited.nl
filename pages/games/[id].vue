@@ -13,7 +13,7 @@
             <div class="w-24 bg-primary"></div>
             <div class="w-24 bg-primary" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);"></div>
           </div>
-          <button @click="sendMessageToIframe"><i class="fa-solid fa-expand px-6"></i></button>
+          <button @click="setFullScreen"><i class="fa-solid fa-expand px-6"></i></button>
         </div>
       </div>
       <div class="flex-1 basis-96 bg-bgsecondary rounded-lg shadow-md flex flex-col gap-3 p-8">
@@ -41,6 +41,11 @@ const state = reactive({
   errors: [],
   loading: true,
 });
+
+function setFullScreen () {
+  const iframe = document.getElementById('game');
+  iframe.requestFullscreen();
+}
 
 const embeddedGameUrl = ref(null);
 
