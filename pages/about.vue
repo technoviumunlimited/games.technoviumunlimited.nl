@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container mx-auto flex flex-row justify-between items-center mt-12 md:mt-24 gap-12">
+    <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center mt-24 gap-12">
         <div class="flex-1 flex flex-col gap-5 justify-center">
           <h1 class="font-black text-3xl uppercase">Wat is Technovium unlimited</h1>
           <p class="font-medium">Welkom bij Technovium Unlimited, het platform waar we de schoolprojecten presenteren die door onze studenten bij Technovium zijn afgerond. Onze website is gewijd aan het benadrukken van het diverse scala aan projecten die door onze getalenteerde studenten zijn afgerond, variërend over een breed scala aan onderwerpen en vakgebieden.</p>
@@ -9,7 +9,7 @@
           <img src="/img/about-values.png" alt="logo" class="max-h-80"/>
         </div>
     </div>
-    <div class="bg-footer container mx-auto flex flex-row justify-between items-center mt-12 md:mt-24 gap-12 py-12 md:py-24">
+    <div class="bg-footer container mx-auto flex flex-col-reverse md:flex-row justify-between items-center mt-24 gap-12 py-12 md:py-24">
       <div class="flex-1 flex justify-center items-center">
         <img src="/img/book.svg" alt="logo" class="max-h-80 -scale-x-100"/>
       </div>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto flex flex-row justify-between items-center mt-12 md:mt-24 gap-12">
+    <div class="container mx-auto flex flex-col-reverse md:flex-row justify-between items-center mt-24 gap-12">
       <div class="flex-1 flex flex-row flex-wrap gap-8">
         <div class="flex-1 basis-60 flex flex-col gap-1">
           <h3 class="font-bold text-lg">Continue groei</h3>
