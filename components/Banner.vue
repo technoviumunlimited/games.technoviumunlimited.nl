@@ -37,7 +37,7 @@
             </div>
             <div class="flex-1 basis-full flex items-center justify-center lg:basis-[55%] min-h-full overflow-hidden relative right-wrap object-cover aspect-video h-full">
                 <video autoplay loop id="myVideo" class="xl:w-full max-w-none object-center">
-                    <source src="https://technoviumunlimited.nl/media/play.3dc6e4a3.mp4" type="video/mp4">
+                    <source src="https://assets.technoviumunlimited.nl/media/play.3dc6e4a3.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
