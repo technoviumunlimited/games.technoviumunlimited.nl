@@ -51,7 +51,7 @@ const embeddedGameUrl = ref(null);
 
 onMounted(async () => {
   try {
-    embeddedGameUrl.value = 'https://api.technoviumunlimited.nl/embeddedgames/' + route.params.id +'/';
+    embeddedGameUrl.value = 'https://api.technoviumunlimited.nl/games/' + route.params.id +'/';
   } catch (error) {
     console.error(error);
     state.errors.push(error);
@@ -65,7 +65,7 @@ const sendMessageToIframe = () => {
 
   if (iframe) {
     // Send a message to the iframe
-    iframe.contentWindow.postMessage('SetFullscreen', 'https://api.technoviumunlimited.nl/embeddedgames/' + route.params.id);
+    iframe.contentWindow.postMessage('SetFullscreen', 'https://api.technoviumunlimited.nl/games/' + route.params.id);
   }
 }
 </script>
