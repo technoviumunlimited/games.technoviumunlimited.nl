@@ -5,7 +5,7 @@
         <div class="w-full aspect-w-16 aspect-h-9"  >
           <iframe class="w-full h-full" id="game" v-if="embeddedGameUrl"
             :src="embeddedGameUrl"
-            frameborder="0" 
+            frameborder="0" allowfullscreen
           ></iframe>
         </div>
         <div class="w-full flex justify-between items-center text-3xl">
