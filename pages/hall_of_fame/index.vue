@@ -10,8 +10,6 @@
         <!-- Add more options as needed -->
       </div>
       <HallOfFameCardList :cards="filteredPeople" />
-
-      
     </div>
   </div>
 </template>
