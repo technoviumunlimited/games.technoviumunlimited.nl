@@ -1,6 +1,29 @@
 import { DefineNuxtConfig } from "nuxt/config"
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Technovium Unlimited',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        // Add more meta tags below as needed
+        { hid: 'description', name: 'description', content: 'Educatieve projecten, 3D omgevingen en spellen, gemaakt door ROC studenten en docenten.' },
+        // Other meta tags like og:title, og:description, og:image for social sharing
+        { property: 'og:title', content: 'Technovium Unlimited' },
+        { property: 'og:description', content: 'Educatieve projecten, 3D omgevingen en spellen, gemaakt door ROC studenten en docenten.' },
+        { property: 'og:image', content: 'https://technoviumunlimited.nl/img/fulllogo.png' },
+        // Twitter card meta tags
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Technovium Unlimited' },
+        { name: 'twitter:description', content: 'Educatieve projecten, 3D omgevingen en spellen, gemaakt door ROC studenten en docenten.' },
+        { name: 'twitter:image', content: 'https://technoviumunlimited.nl/img/fulllogo.png' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/img/logo.svg' }, // Update the href with your favicon file name and extension
+      ],
+    },
+  },
   runtimeConfig: {
     public: {
       FIREBASE_APP_KEY: process.env.FIREBASE_APP_KEY,

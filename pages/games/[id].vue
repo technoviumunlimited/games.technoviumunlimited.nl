@@ -34,7 +34,6 @@
 const route = useRoute();
 
 const { data, error, pending, refresh } = await useFetch(`https://api.technoviumunlimited.nl/v1/games/` + route.params.id);
-console.log(data);
 
 const state = reactive({
   results: {},
@@ -47,6 +46,7 @@ const embeddedGameUrl = ref(null);
 onMounted(async () => {
   try {
     embeddedGameUrl.value = 'https://api.technoviumunlimited.nl/embeddedgames/' + route.params.id;
+    setMetaTags();
   } catch (error) {
     console.error(error);
     state.errors.push(error);
@@ -57,11 +57,39 @@ const sendMessageToIframe = () => {
   // Get a reference to the iframe element
   const iframe = document.getElementById('game');
 
- 
-
   if (iframe) {
     // Send a message to the iframe
     iframe.contentWindow.postMessage('SetFullscreen', 'https://api.technoviumunlimited.nl/embeddedgames/' + route.params.id);
   }
 }
+
+const setMetaTags = () => {
+  if (data) {
+    console.log(data._value.game[0].name)
+    const title = `Game - ${data._value.game[0].name}`;
+    const description = data._value.game[0].description;
+
+    // Set meta tags dynamically for this game page
+    document.title = title;
+
+    const metaTags = [
+      { hid: 'description', name: 'description', content: description },
+      // Other meta tags specific to this game page if needed
+    ];
+
+    // Remove existing meta tags from the document
+    document.querySelectorAll('meta[data-n-head="1"]').forEach(tag => tag.remove());
+
+    // Add new meta tags to the document head
+    metaTags.forEach(tag => {
+      const meta = document.createElement('meta');
+      Object.keys(tag).forEach(key => {
+        meta.setAttribute(key, tag[key]);
+      });
+      document.head.appendChild(meta);
+    });
+  }
+};
 </script>
+
+
