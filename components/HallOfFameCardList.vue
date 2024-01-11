@@ -1,6 +1,8 @@
 <template>
-    <div class="container mx-auto py-4 lg:py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-      <!-- <HallOfFameCard v-for="card in cards" :key="card.name" :card="card" /> -->
+    <!-- <HallOfFameCard v-for="card in cards" :key="card.name" :card="card" /> -->
+    <div class="w-3/4 flex flex-wrap bg-white rounded-tr-lg rounded-br-lg p-4">
+      <!-- Display people information here -->
+      <HallOfFameCard v-for="person in cards" :key="person.id" :person="person" />
     </div>
 </template>
 
@@ -12,5 +14,8 @@ export default {
       required: true,
     },
   },
+  mounted() {
+    console.log(this.cards);
+  }
 };
 </script>
