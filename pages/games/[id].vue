@@ -1,19 +1,19 @@
 <template>
   <div class="container mx-auto mt-12 md:mt-24">
     <div class="flex flex-row gap-8 flex-wrap">
-      <div class="flex-1 w-fit basis-2/3 bg-bgsecondary rounded-lg shadow-md flex flex-col overflow-hidden">
-        <div class="w-full aspect-w-16 aspect-h-9" id="game" >
-          <iframe class="w-full h-full" v-if="embeddedGameUrl"
+      <div class="flex-1 w-fit basis-2/3 bg-bgsecondary rounded-lg shadow-md flex flex-col overflow-hidden h-fit">
+        <div class="w-full aspect-w-16 aspect-h-9"  >
+          <iframe class="w-full h-full" id="game" v-if="embeddedGameUrl"
             :src="embeddedGameUrl"
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           ></iframe>
         </div>
         <div class="w-full flex justify-between items-center text-3xl">
-          <div class="h-full flex flex-row">
+          <div class="h-16 flex flex-row">
             <div class="w-24 bg-primary"></div>
             <div class="w-24 bg-primary" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);"></div>
           </div>
-          <button @onclick="sendMessageToIframe"><i class="fa-solid fa-expand p-6"></i></button>
+          <button @click="setFullScreen"><i class="fa-solid fa-expand px-6"></i></button>
         </div>
       </div>
       <div class="flex-1 basis-96 bg-bgsecondary rounded-lg shadow-md flex flex-col gap-3 p-8">
@@ -24,7 +24,7 @@
                     <div class="h-2 w-2" v-bind:style="{backgroundColor: category.color}"></div>
                     <div>{{ category.name }}</div>
                 </div>
-        <p class="text-light whitespace-break-spaces" v-html=data.game[0].description></p>
+        <div class="text-light whitespace-break-spaces" v-html=data.game[0].description></div>
       </div>
     </div>
   </div>
@@ -40,6 +40,11 @@ const state = reactive({
   errors: [],
   loading: true,
 });
+
+function setFullScreen () {
+  const iframe = document.getElementById('game');
+  iframe.requestFullscreen();
+}
 
 const embeddedGameUrl = ref(null);
 

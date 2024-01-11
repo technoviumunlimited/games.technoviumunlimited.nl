@@ -1,7 +1,7 @@
 <template>
     <div class="bg-bgsecondary flex flex-col rounded-lg overflow-hidden shadow-lg">
         <div class="w-full bg-slate-200 pb-[56.25%] lg:pb-[37.5%] aspect-w-16 aspect-h-9 lg:aspect-h-6 relative">
-            <NuxtImg class="w-full absolute object-cover left-0 top-0 h-full contain" :src="data._thumb[0]" loading="lazy" />
+            <NuxtImg class="w-full absolute object-cover left-0 top-0 h-full contain" :src="data._thumb" loading="lazy" />
         </div>
         <div class="flex flex-col gap-5 p-8 md:p-12">
             <div class="flex flex-col gap-1">
