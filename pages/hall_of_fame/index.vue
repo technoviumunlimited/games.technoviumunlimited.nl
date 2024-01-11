@@ -1,4 +1,3 @@
-<!-- pages/hall-of-fame.vue -->
 <template>
     <div class="hall-of-fame p-8">
       <h1 class="text-3xl font-bold mb-6">Hall of Fame</h1>
