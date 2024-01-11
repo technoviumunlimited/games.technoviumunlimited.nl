@@ -11,11 +11,11 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "autoprefixer": "^10.4.15",
+    "autoprefixer": "^10.4.16",
     "nuxt": "^3.7.1",
     "nuxt-unity-webgl": "^0.0.3",
-    "postcss": "^8.4.29",
-    "tailwindcss": "^3.3.3"
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1"
   },
   "dependencies": {
     "@nuxt/image": "^1.0.0-rc.3",

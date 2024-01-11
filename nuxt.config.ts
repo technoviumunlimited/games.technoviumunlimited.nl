@@ -20,7 +20,11 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://technoviumunlimited.nl/img/fulllogo.png' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/img/logo.svg' }, // Update the href with your favicon file name and extension
+        { rel: 'icon', type: 'image/x-icon', href: '/img/logo.svg' },
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' },
       ],
     },
   },
@@ -35,18 +39,7 @@ export default defineNuxtConfig({
 
     }
   },
-  //ssr:false, //for now we need later to fix this for SEO
-  app: {
-    head: {
-      link: [
-        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' },
-      ],
-    },
-  },
-  //ssr:false, //for now we need later to fix this for SEO
+  
   //modules: ['nuxt-unity-webgl'],
   modules: [
     // Load image optimization
