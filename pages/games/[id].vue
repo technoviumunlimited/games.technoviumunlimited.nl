@@ -27,17 +27,23 @@
         <div class="flex-1 text-light whitespace-break-spaces overflow-hidden" v-html=data.game[0].description></div>
       </div>
     </div>
-    <ul class="text-sm font-medium text-center text-gray-500 rounded-lg shadow flex dark:divide-gray-700 dark:text-gray-400 mt-24">
-        <li @click="selectTab('Description')" :class="{ 'active': selectedTab === 'Description' }" class="w-full group">
-            <a class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 rounded-s-lg group-[.active]:ring-4 group-[.active]:ring-blue-300 group-[.active]:outline-none">Description</a>
+    <ul class="text-sm font-medium text-center text-gray-500 rounded-lg shadow grid grid-cols-2 md:grid-cols-6 xl:grid-cols-12 gap-3 mt-24 bg-footer">
+        <li @click="selectTab('Description')" :class="{ 'active': selectedTab === 'Description' }" class="group col-span-2">
+            <a class="flex flex-col gap-3 py-4 col-span-3 items-center justify-center rounded-lg group-[.active]:bg-bgsecondary text-lg font-bold">
+              <i class="fa-solid fa-file-lines text-5xl"></i>
+              <span>Description</span>
+            </a>
         </li>
-        <li @click="selectTab('Collaborators')" :class="{ 'active': selectedTab === 'Collaborators' }" class="w-full group">
-            <a class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 rounded-s-lg group-[.active]:ring-4 group-[.active]:ring-blue-300 group-[.active]:outline-none">Collaborators</a>
+        <li @click="selectTab('Collaborators')" :class="{ 'active': selectedTab === 'Collaborators' }" class="group col-span-2">
+            <a class="flex flex-col gap-3 py-4 items-center justify-center rounded-lg group-[.active]:bg-bgsecondary text-lg font-bold">
+              <i class="fa-solid fa-users text-5xl"></i>
+              <span>Collaborators</span>
+            </a>
         </li>
     </ul>
     <div :class="{ 'hidden': selectedTab !== 'Description' }" class="bg-bgsecondary rounded-lg shadow-md gap-3 p-8 overflow-hidden mt-6" v-html=data.game[0].description></div>
     <div :class="{ 'hidden': selectedTab !== 'Collaborators' }" class="bg-bgsecondary rounded-lg shadow-md gap-3 p-8 overflow-hidden mt-6">
-      
+      <HallOfFameCardList :cards="people"/>
     </div>
   </div>
 </template>
@@ -113,6 +119,12 @@ export default {
   data() {
   return {
     selectedTab: 'Description',
+
+    // Replace with real data
+    people: [
+      { id: 1, logo: '/path/to/logo1.png', name: 'John Doe', position: 'CEO', role: 'Frontenders' },
+      { id: 2, logo: '/path/to/logo2.png', name: 'Jane Smith', position: 'CTO', role: 'Backenders' },
+    ],
   };
 },
   mounted() {
@@ -133,7 +145,6 @@ export default {
       }
     },
     selectTab(tab) {
-      console.error("TAB CLICKED");
       this.selectedTab = tab;
     },
   },
