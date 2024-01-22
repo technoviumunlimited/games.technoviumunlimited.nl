@@ -18,6 +18,9 @@
                         <li class="nav-item hover:text-primary">
                             <a class="nav-link" href="/blogs">Blogs</a>
                         </li>
+                        <li class="nav-item hover:text-primary">
+                            <a class="nav-link" href="/hall-of-fame">Hall of Fame</a>
+                        </li>
                     </ul>
                 </div>
             </div>
