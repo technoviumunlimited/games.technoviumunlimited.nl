@@ -9,9 +9,11 @@
       <!-- Content container -->
       <div class="flex items-center w-full z-10">
         <!-- Text container -->
-        <div class="w-2/5 text-black bg-transparent p-8">
-          <p><strong>Worked on:</strong></p>
-          <p>Frontend</p>
+        <div class="w-2/5 text-black bg-transparent">
+          <div class="px-24">
+            <p><strong>Worked on:</strong></p>
+            <p>Frontend</p>
+          </div>
         </div>
   
         <!-- Image overlay with padding -->
