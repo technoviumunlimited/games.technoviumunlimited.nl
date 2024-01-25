@@ -1,6 +1,6 @@
 <template>
   <div class="hall-of-fame p-8">
-    <h1 class="text-3xl font-bold mb-6">Hall of Fame</h1>
+    <h1 class="text-3xl font-bold mb-6 ml-16">Hall of Fame</h1>
     <div class="flex">
       <div class="w-1/4 pr-4 bg-gray-300 rounded-tl-lg rounded-bl-lg p-4 text-center">
         <!-- Navigation options go here -->
@@ -10,8 +10,6 @@
         <!-- Add more options as needed -->
       </div>
       <HallOfFameCardList :cards="filteredPeople" />
-
-      
     </div>
   </div>
 </template>
@@ -23,8 +21,9 @@ data() {
     selectedTab: 'Frontenders', // Default selected tab
     people: [
       // Sample data, replace with your actual data
-      { id: 1, logo: '/path/to/logo1.png', name: 'John Doe', position: 'CEO', role: 'Frontenders' },
-      { id: 2, logo: '/path/to/logo2.png', name: 'Jane Smith', position: 'CTO', role: 'Backenders' },
+      { id: 1, logo: '/path/to/logo1.png', name: 'Juul van Tilburg', position: 'Software Developer', role: 'Frontenders' },
+      { id: 2, logo: '/path/to/logo2.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Backenders' },
+      { id: 3, logo: '/path/to/logo2.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Frontenders' },
       // Add more people as needed
     ],
   };
