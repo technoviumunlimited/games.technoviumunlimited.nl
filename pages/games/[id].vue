@@ -122,8 +122,9 @@ export default {
 
     // Replace with real data
     people: [
-      { id: 1, logo: '/path/to/logo1.png', name: 'John Doe', position: 'CEO', role: 'Frontenders' },
-      { id: 2, logo: '/path/to/logo2.png', name: 'Jane Smith', position: 'CTO', role: 'Backenders' },
+      { id: 1, logo: '/path/to/logo1.png', name: 'Juul van Tilburg', position: 'Frontend Developer', role: 'Frontenders' },
+      { id: 2, logo: '/path/to/logo2.png', name: 'Iris Reijnen', position: 'Backend Developer', role: 'Backenders' },
+      { id: 3, logo: '/path/to/logo2.png', name: 'Davor Radic', position: 'Product Owner', role: 'Backenders' },
     ],
   };
 },
