@@ -9,7 +9,7 @@
       <!-- Content container -->
       <div class="flex items-center w-full z-10">
         <!-- Text container -->
-        <div class="w-2/5 text-black bg-transparent p-8 items-center">
+        <div class="w-2/5 text-black bg-transparent p-8">
           <p><strong>Worked on:</strong></p>
           <p>Frontend</p>
         </div>
@@ -21,8 +21,8 @@
   
         <!-- Text container -->
         <div class="w-3/5 bg-transparent p-16">
-          <p><strong>{{ person.name }}</strong></p>
-          <p class="text-sm mb-4">{{ person.position }}</p>
+          <p class="pl-4"><strong>{{ person.name }}</strong></p>
+          <p class="text-sm mb-4 pl-4">{{ person.position }}</p>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
         </div>
       </div>
