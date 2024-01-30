@@ -1,5 +1,5 @@
 <template>
-  <div class="hall-of-fame p-8">
+  <div class="hall-of-fame p-8 mb-24">
     <h1 class="text-3xl font-bold mb-6 ml-16">Hall of Fame</h1>
     <div class="flex">
       <div class="w-1/4 pr-4 bg-gray-300 rounded-tl-lg rounded-bl-lg p-4 text-center">

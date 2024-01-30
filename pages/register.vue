@@ -1,5 +1,5 @@
 <template>
-    <main class="w-full max-w-md mx-auto p-6">
+    <main class="w-full max-w-md mx-auto p-6 mb-24">
       <div class="mt-12 md:mt-24 bg-bgsecondary border border-gray-200 rounded-xl shadow-sm">
         <div class="p-4 sm:p-7">
           <div class="text-center">

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-footer text-light text-lg font-bold mt-24">
+    <div class="bg-footer text-light text-lg font-bold">
         <div class="container mx-auto flex flex-col">
             <div class="py-16 space-y-4 flex flex-col md:flex-row gap-24 md:items-center flex-wrap gap-y-5">
                 <div class="flex-1">

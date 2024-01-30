@@ -1,5 +1,5 @@
 <template>
-    <div>hi, hier komt nog volledige pagina</div>
+    <div class="mb-24">hi, hier komt nog volledige pagina</div>
 </template>
 
 <script setup>

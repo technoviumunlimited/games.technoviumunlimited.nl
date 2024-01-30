@@ -35,7 +35,7 @@ function loadMore() {
 </script>
 
 <template>
-  <div>
+  <div class="mb-24">
     <BlogCardListTop :data="blogDataTop" :loading="blogPendingTop" />
     <div class="container mx-auto flex flex-col gap-8 mt-12 md:mt-24">
       <h2 class="font-black text-3xl md:text-5xl">Browse Topics</h2>

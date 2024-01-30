@@ -5,7 +5,7 @@ const { data, error, pending, refresh } = await useFetch(`https://api.technovium
 
 
 <template>
-    <div class="container mx-auto mt-12 md:mt-24">
+    <div class="container mx-auto mt-12 md:mt-24 mb-24">
     <span v-if="pending">Loading...</span>
 
     <div v-else-if="data">

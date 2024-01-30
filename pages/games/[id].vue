@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-12 md:mt-24">
+  <div class="container mx-auto mt-12 md:mt-24 mb-24">
     <div class="grid grid-cols-12 grid-rows-auto gap-8 flex-wrap" id="gridContainer">
       <div class="col-span-12 lg:col-span-8 row-span-1 bg-bgsecondary rounded-lg shadow-md flex flex-col overflow-hidden h-fit" id="gameContainer">
         <div class="w-full aspect-w-16 aspect-h-9"  >

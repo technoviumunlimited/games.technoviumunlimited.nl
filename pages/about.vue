@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-24">
     <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center mt-24 gap-12">
         <div class="flex-1 flex flex-col gap-5 justify-center">
           <h1 class="font-black text-3xl uppercase">Wat is Technovium unlimited</h1>

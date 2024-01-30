@@ -1,9 +1,9 @@
 <template>
     <div class="relative h-full flex items-center justify-center">
-      <!-- White background -->
+      <!-- Gray background -->
       <div class="absolute left-0 top-0 h-full w-2/5 bg-gray-300"></div>
   
-      <!-- Black background -->
+      <!-- No background -->
       <div class="absolute right-0 top-0 h-full w-3/5"></div>
   
       <!-- Content container -->
@@ -12,7 +12,7 @@
         <div class="w-2/5 text-black bg-transparent">
           <div class="px-24">
             <p><strong>Worked on:</strong></p>
-            <p>Frontend</p>
+            <p>{{ person.role }}</p>
           </div>
         </div>
   
