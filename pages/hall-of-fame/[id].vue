@@ -25,7 +25,7 @@
         <div class="w-3/5 bg-transparent p-16">
           <p class="pl-4"><strong>{{ person.name }}</strong></p>
           <p class="text-sm mb-4 pl-4">{{ person.position }}</p>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
+          <p>{{ person.description }}</p>
         </div>
       </div>
     </div>
@@ -42,9 +42,9 @@
       person() {
         const personId = this.$route.params.id;
         const people = [
-          { id: 1, logo: '/path/to/logo1.png', name: 'Juul van Tilburg', position: 'Software Developer', role: 'Frontenders' },
-          { id: 2, logo: '/path/to/logo2.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Backenders' },
-          { id: 3, logo: '/path/to/logo2.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Frontenders' },
+          { id: 1, logo: '../../public/img/book.png', name: 'Juul van Tilburg', position: 'Software Developer', role: 'Frontend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
+          { id: 2, logo: '../../public/img/book.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Backend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
+          { id: 3, logo: '../../public/img/book.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Frontend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
           // Add more people as needed
         ];
         return people.find(person => person.id === parseInt(personId));
