@@ -1,15 +1,15 @@
 <template>
     <div class="relative h-full flex items-center justify-center">
       <!-- Gray background -->
-      <div class="absolute left-0 top-0 h-full w-2/5 bg-gray-300"></div>
+      <div class="hidden lg:block absolute left-0 top-0 h-full w-2/5 bg-gray-300"></div>
   
       <!-- No background -->
-      <div class="absolute right-0 top-0 h-full w-3/5"></div>
+      <div class="hidden absolute right-0 top-0 h-full w-3/5"></div>
   
       <!-- Content container -->
-      <div class="flex items-center w-full z-10">
+      <div class="flex items-center w-full flex-wrap z-10 p-8 lg:p-0 gap-5 lg:gap-0">
         <!-- Text container -->
-        <div class="w-2/5 text-black bg-transparent">
+        <div class="w-full lg:w-[27%] text-black bg-transparent">
           <div class="px-24">
             <p><strong>Worked on:</strong></p>
             <p>{{ person.role }}</p>
@@ -17,12 +17,12 @@
         </div>
   
         <!-- Image overlay with padding -->
-        <div class="w-1/4 py-40">
+        <div class="w-full lg:w-1/4 max-w-40 lg:max-w-full mx-16 py-0 lg:mx-0 lg:py-40">
           <img :src="person.logo" alt="Your Image" class="w-full h-full object-cover">
         </div>
   
         <!-- Text container -->
-        <div class="w-3/5 bg-transparent p-16">
+        <div class="w-full lg:w-[46.67%] bg-transparent px-16 py-0 lg:py-16">
           <p class="pl-4"><strong>{{ person.name }}</strong></p>
           <p class="text-sm mb-4 pl-4">{{ person.position }}</p>
           <p class="text-sm text-light" v-html="person.description"></p>
