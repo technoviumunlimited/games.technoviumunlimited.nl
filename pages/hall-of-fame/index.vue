@@ -26,9 +26,9 @@ data() {
       { id: 1, logo: '../../public/img/book.png', name: 'Juul van Tilburg', position: 'Software Developer', role: 'Frontend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
       { id: 2, logo: '../../public/img/book.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Backend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
       { id: 3, logo: '../../public/img/book.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Frontend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
-      { id: 3, logo: '../../public/img/book.png', name: 'Daan Klever', position: 'Bouwkundige', role: 'Modelleur', description: '' },
-      { id: 3, logo: '../../public/img/book.png', name: 'Piet Leest', position: 'Bouwkundige', role: 'Modelleur', description: '' },
-      { id: 3, logo: '../../public/img/book.png', name: 'Marije Rein', position: 'MediaVormgeving', role: 'Designer', description: '' },
+      { id: 4, logo: '../../public/img/book.png', name: 'Daan Klever', position: 'Bouwkundige', role: 'Modelleur', description: '' },
+      { id: 5, logo: '../../public/img/book.png', name: 'Piet Leest', position: 'Bouwkundige', role: 'Modelleur', description: '' },
+      { id: 6, logo: '../../public/img/book.png', name: 'Marije Rein', position: 'MediaVormgeving', role: 'Designer', description: '' },
       // Add more people as needed
     ],
   };
