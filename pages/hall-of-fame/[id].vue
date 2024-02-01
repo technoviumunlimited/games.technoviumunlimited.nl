@@ -47,7 +47,7 @@
           { id: 3, logo: '/img/book.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Frontend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
           {
             id: 4,
-            logo: '/img/book.png',
+            logo: '/img/profile/Daan.jpg',
             name: 'Daan Klever',
             position: 'Bouwkundige',
             role: 'Modelleur',
@@ -55,7 +55,7 @@
           },
           {
             id: 5,
-            logo: '/img/book.png',
+            logo: '/img/profile/Piet.jpg',
             name: 'Piet Leest',
             position: 'Bouwkundige',
             role: 'Modelleur',
@@ -63,7 +63,7 @@
           },
           {
             id: 6,
-            logo: '/img/book.png',
+            logo: '/img/profile/Marije.jpg',
             name: 'Marije Rein',
             position: 'Mediavormgever',
             role: 'Designer',
