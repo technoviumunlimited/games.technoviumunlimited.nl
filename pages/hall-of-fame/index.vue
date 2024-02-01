@@ -7,6 +7,8 @@
         <div @click="selectTab('Frontend')" :class="{ 'font-bold': selectedTab === 'Frontend' }" class="cursor-pointer mb-4">Frontend</div>
         <div @click="selectTab('Backend')" :class="{ 'font-bold': selectedTab === 'Backend' }" class="cursor-pointer mb-4">Backend</div>
         <div @click="selectTab('Gamemaker')" :class="{ 'font-bold': selectedTab === 'Gamemaker' }" class="cursor-pointer mb-4">Gamemaker</div>
+        <div @click="selectTab('Modelleur')" :class="{ 'font-bold': selectedTab === 'Modelleur' }" class="cursor-pointer mb-4">Modelleur</div>
+        <div @click="selectTab('Designer')" :class="{ 'font-bold': selectedTab === 'Designer' }" class="cursor-pointer mb-4">Designer</div>
         <!-- Add more options as needed -->
       </div>
       <HallOfFameCardList :cards="filteredPeople" />
@@ -24,6 +26,9 @@ data() {
       { id: 1, logo: '../../public/img/book.png', name: 'Juul van Tilburg', position: 'Software Developer', role: 'Frontend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
       { id: 2, logo: '../../public/img/book.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Backend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
       { id: 3, logo: '../../public/img/book.png', name: 'Iris Reijnen', position: 'Software Developer', role: 'Frontend', description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr,' },
+      { id: 3, logo: '../../public/img/book.png', name: 'Daan Klever', position: 'Bouwkundige', role: 'Modelleur', description: '' },
+      { id: 3, logo: '../../public/img/book.png', name: 'Piet Leest', position: 'Bouwkundige', role: 'Modelleur', description: '' },
+      { id: 3, logo: '../../public/img/book.png', name: 'Marije Rein', position: 'MediaVormgeving', role: 'Designer', description: '' },
       // Add more people as needed
     ],
   };
